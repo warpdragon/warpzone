@@ -1,2 +1,2 @@
-# warpzone
-new mod
+# Warpzone
+by Ryan Higginbotham
