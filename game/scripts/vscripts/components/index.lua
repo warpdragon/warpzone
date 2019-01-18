@@ -1,3 +1,4 @@
+-- Required by gamemode
 
 -- component list. comment out things to disable them
 -- require('components/filters/index')
@@ -24,6 +25,8 @@
 -- require('components/music/index')
 -- require('components/items/index')
 -- require('components/bottlepass/index')
-
+print ("printwarp lane_creeps and buildings indexes")
+require('components/lane_creeps/index')
+require('components/buildings/index')
 -- should be last
 -- require('components/saveload/index')

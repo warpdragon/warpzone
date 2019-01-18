@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------------------
 -- General globals
 
-DOTA_TEAM_SPECTATOR = 1
+-- DOTA_TEAM_SPECTATOR = 1
 
 -----------------------------------------------------------------------------------
 -- OAA specific settings
@@ -21,7 +21,7 @@ DOTA_TEAM_SPECTATOR = 1
 --     local clampedLevel = math.min(maxLevel, key)
     -- Store result instead of recalculating for lookups for the same level
     -- Linear interpolation between min and max level/time pairs
-    table[key] = math.floor(minTime + (clampedLevel - minLevel) * (maxTime - minTime) / (maxLevel - minLevel))
+    -- table[key] = math.floor(minTime + (clampedLevel - minLevel) * (maxTime - minTime) / (maxLevel - minLevel))
 --     return table[key]
 --   end
 -- })
@@ -59,7 +59,7 @@ DOTA_TEAM_SPECTATOR = 1
 -- RANKED_PICK_TIME = 25
 
 -- Game timings
--- PREGAME_TIME = 10
+PREGAME_TIME = 10
 -- AP_GAME_TIME = 90
 
 -- Duels
@@ -123,7 +123,7 @@ DOTA_TEAM_SPECTATOR = 1
 
 ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned
 UNIVERSAL_SHOP_MODE = false             -- Should the main shop contain Secret Shop items as well as regular items
-ALLOW_SAME_HERO_SELECTION = false       -- Should we let people select the same hero as each other
+ALLOW_SAME_HERO_SELECTION = true       -- Should we let people select the same hero as each other
 
 CUSTOM_GAME_SETUP_TIME = 30.0           -- How long to show custom game setup? 0 disables
 HERO_SELECTION_TIME = 30.0              -- How long should we let people select their hero?
@@ -153,14 +153,14 @@ USE_STANDARD_HERO_GOLD_BOUNTY = true    -- Should we give gold for hero kills th
 
 USE_CUSTOM_TOP_BAR_VALUES = true        -- Should we do customized top bar values or use the default kill count per team?
 TOP_BAR_VISIBLE = true                  -- Should we display the top bar score/count at all?
-SHOW_KILLS_ON_TOPBAR = true             -- Should we display kills only on the top bar? (No denies, suicides, kills by neutrals)  Requires USE_CUSTOM_TOP_BAR_VALUES
+SHOW_KILLS_ON_TOPBAR = false            -- Should we display kills only on the top bar? (No denies, suicides, kills by neutrals)  Requires USE_CUSTOM_TOP_BAR_VALUES
 
-ENABLE_TOWER_BACKDOOR_PROTECTION = false-- Should we enable backdoor protection for our towers?
+ENABLE_TOWER_BACKDOOR_PROTECTION = true -- Should we enable backdoor protection for our towers?
 REMOVE_ILLUSIONS_ON_DEATH = false       -- Should we remove all illusions if the main hero dies?
 DISABLE_GOLD_SOUNDS = false             -- Should we disable the gold sound when players get gold?
 
 END_GAME_ON_KILLS = false               -- Should the game end after a certain number of kills?
-KILLS_TO_END_GAME_FOR_TEAM = 50         -- How many kills for a team should signify an end of game?
+KILLS_TO_END_GAME_FOR_TEAM = 100         -- How many kills for a team should signify an end of game?
 
 USE_CUSTOM_HERO_LEVELS = true           -- Should we allow heroes to have custom levels?
 MAX_LEVEL = 50                          -- What level should we let heroes get to?
@@ -193,9 +193,34 @@ XP_PER_LEVEL_TABLE = {
 	22605,
 	25105,
 	27800,
+	30000,
+	33000,
+	36000,
+	39000,
+	42000,
+	46000,
+	50000,
+	54000,
+	59000,
+	64000,
+	69000,
+	75000,
+	80000,
+	87000,
+	93000,
+	100000,
+	107000,
+	111000,
+	122000,
+	130000,
+	138000,
+	147000,
+	156000,
+	165000,
+	175000,
 }
-for i = #XP_PER_LEVEL_TABLE + 1, MAX_LEVEL do
-  XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i - 1] + (300 * ( i - 15 ))
+for i=1,MAX_LEVEL do
+  XP_PER_LEVEL_TABLE[i] = (i-1) * 100
 end
 
 ENABLE_FIRST_BLOOD = true               -- Should we enable first blood for the first kill in this game?
@@ -236,21 +261,21 @@ ENABLED_RUNES[DOTA_RUNE_BOUNTY] = true
 ENABLED_RUNES[DOTA_RUNE_ARCANE] = true
 
 
-MAX_NUMBER_OF_TEAMS = 2                -- How many potential teams can be in this game mode?
-USE_CUSTOM_TEAM_COLORS = false           -- Should we use custom team colors?
-USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team colors to color the players/minimap?
+MAX_NUMBER_OF_TEAMS = 4                             -- How many potential teams can be in this game mode?
+USE_CUSTOM_TEAM_COLORS = true                       -- Should we use custom team colors?
+USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true           -- Should we use custom team colors to color the players/minimap?
 
-TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors.
-TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }  --    Teal
-TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 243, 201, 9 }   --    Yellow
-TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 197, 77, 168 }  --    Pink
-TEAM_COLORS[DOTA_TEAM_CUSTOM_2] = { 255, 108, 0 }   --    Orange
-TEAM_COLORS[DOTA_TEAM_CUSTOM_3] = { 52, 85, 255 }   --    Blue
-TEAM_COLORS[DOTA_TEAM_CUSTOM_4] = { 101, 212, 19 }  --    Green
-TEAM_COLORS[DOTA_TEAM_CUSTOM_5] = { 129, 83, 54 }   --    Brown
-TEAM_COLORS[DOTA_TEAM_CUSTOM_6] = { 27, 192, 216 }  --    Cyan
-TEAM_COLORS[DOTA_TEAM_CUSTOM_7] = { 199, 228, 13 }  --    Olive
-TEAM_COLORS[DOTA_TEAM_CUSTOM_8] = { 140, 42, 244 }  --    Purple
+TEAM_COLORS = {}                                    -- If USE_CUSTOM_TEAM_COLORS is set, use these colors.
+TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 244, 223, 88 }  --    Gold      ffe0c0
+TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 255, 33, 49 }   --    Red       ff60c0
+TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 96, 192, 255 }  --    Blue      60c0ff
+TEAM_COLORS[DOTA_TEAM_CUSTOM_2] = { 192, 255, 96 }  --    Green     c0ff60
+TEAM_COLORS[DOTA_TEAM_CUSTOM_3] = { 32, 32, 32 }    --    Gray
+TEAM_COLORS[DOTA_TEAM_CUSTOM_4] = { 32, 32, 32 }    --    Gray
+TEAM_COLORS[DOTA_TEAM_CUSTOM_5] = { 32, 32, 32 }    --    Gray
+TEAM_COLORS[DOTA_TEAM_CUSTOM_6] = { 32, 32, 32 }    --    Gray
+TEAM_COLORS[DOTA_TEAM_CUSTOM_7] = { 32, 32, 32 }    --    Gray
+TEAM_COLORS[DOTA_TEAM_CUSTOM_8] = { 32, 32, 32 }    --    Gray
 
 -- Surrender Options
 SURRENDER_MINIMUM_KILLS_BEHIND = 50
@@ -261,18 +286,12 @@ USE_AUTOMATIC_PLAYERS_PER_TEAM = false   -- Should we set the number of players 
 
 CUSTOM_TEAM_PLAYER_COUNT = {}           -- If we're not automatically setting the number of players per team, use this table
 
-if GetMapName() == "10v10" then
-  CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_GOODGUYS] = 10
-  CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_BADGUYS]  = 10
-else
-  CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_GOODGUYS] = 5
-  CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_BADGUYS]  = 5
-end
-
--- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_1] = 1
--- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_2] = 1
--- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_3] = 1
--- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_4] = 1
+CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_GOODGUYS] = 3
+CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_BADGUYS]  = 3
+CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_1] = 3
+CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_2] = 3
+-- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_3] = 3
+-- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_4] = 3
 -- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_5] = 1
 -- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_6] = 1
 -- CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_7] = 1

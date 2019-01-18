@@ -68,6 +68,7 @@ require('events')
 --[[ all library code has been loaded ]]
 
 -- load components
+print ("printwarp components")
 require('components/index')
 
 --require("examples/worldpanelsExample")
@@ -214,7 +215,7 @@ end
 function CheckCheatMode()
   if GameRules:IsCheatMode() then
     print("\nThis Match is in Cheat Mode!\n")
-    GameRules:SendCustomMessage("This Match is in <font color='#FF0000'>Cheat Mode</font>!", 0, 0)
+    GameRules:SendCustomMessage("This Match is in <font color='#11EE33'>Cheat Mode</font>!", 0, 0)
     CustomGameEventManager:Send_ServerToAllClients("onGameInCheatMode", {})
   end
 end
