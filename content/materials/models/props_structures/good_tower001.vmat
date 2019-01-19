@@ -1,0 +1,36 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "global_lit_simple.vfx"
+
+	//---- Specular ----
+	F_SPECULAR 1
+
+	//---- Tint Mask ----
+	F_TINT_MASK 1
+
+	//---- Translucent ----
+	F_ALPHA_TEST 1
+
+	//---- Color ----
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+	g_vColorTint2 "[1.000000 1.000000 1.000000 0.000000]"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	TextureColor "materials/models/props_structures/good_tower001_color.png"
+	TextureTintMask "materials/models/props_structures/good_tower001_mask.png"
+
+	//---- Self Illum ----
+	TextureSelfIllumMask "materials/models/props_structures/good_tower001_selfillum.png"
+
+	//---- Specular ----
+	g_flSpecularBloom "0.113"
+	g_flSpecularIntensity "1.000"
+	TextureBloom "materials/models/props_structures/good_tower001_bloom.png"
+	TextureReflectance "materials/models/props_structures/good_tower001_refl.png"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.700"
+	TextureTranslucency "materials/models/props_structures/good_tower001_trans.png"
+}
