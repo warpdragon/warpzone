@@ -8,7 +8,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/props_structures/tower_good"// Model.
+		"Model"						"models/props_structures/tower_good.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower45"
 		"MinimapIconSize"			"320"

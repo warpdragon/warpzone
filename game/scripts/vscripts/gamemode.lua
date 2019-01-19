@@ -8,7 +8,7 @@ BAREBONES_DEBUG_SPEW = false
 
 if GameMode == nil then
     DebugPrint( '[BAREBONES] creating barebones game mode' )
-    print("Lua Version: " .. _VERSION)
+    print("Lua Version: " .. _VERSION) 
     GameMode = class({})
 end
 
@@ -233,6 +233,8 @@ function GameMode:InitGameMode()
   -- InitModule(HeroSelection)
   -- InitModule(ChatCommand)
   -- InitModule(DevCheats)
+     InitModule(towerModule)  
+     InitModule(fountainModule)
   -- register early, register often
   -- CustomGameEventManager:RegisterListener('mmrShuffle', Dynamic_Wrap(HeroSelection, 'MMRShuffle'))
 

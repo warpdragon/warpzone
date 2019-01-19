@@ -3,11 +3,13 @@ print ("printwarp spawn lua")
 require('settings')
 
 if SpawnLaneCreeps == nil then
+    print ("printwarp [lane_creeps/spawn] creating LaneCreep Spawner")
     DebugPrint ('[lane_creeps/spawn] creating LaneCreep Spawner')
     SpawnLaneCreeps = class({})
 end
 
 function SpawnLaneCreeps:Init ()
+  print ("printwarp [lane_creeps/spawn] initialize")
   DebugPrint ('[lane_creeps/spawn] initialize')
 
   Timers:CreateTimer(function()

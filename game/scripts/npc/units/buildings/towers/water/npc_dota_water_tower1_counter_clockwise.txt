@@ -3,7 +3,7 @@
 //=================================================================================
 // Creeps: Water Tower 1 Counter Clockwise
 //=================================================================================
-	"npc_dota_water_tower1_counter_clockwise.txt"
+	"npc_dota_water_tower1_counter_clockwise"
 	{
 		// General
 		//

@@ -1,5 +1,6 @@
 print ("printwarp zonehandler lua")
 function OnStartTouch(keys)
+  print ("printwarp zonehandler OnStartTouch")
   local hTrigger = keys.caller
   local hActivator = keys.activator
   print(hTrigger)
