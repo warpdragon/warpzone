@@ -195,6 +195,7 @@ function GameMode:OnGameInProgress()
   -- InitModule(PlayerConnection)
   -- InitModule(StatusResistance)
   -- InitModule(SaveLoadState)
+     InitModule(SpawnLaneCreeps)
 
   -- LinkLuaModifier( "modifier_xpm_thinker", "modifiers/modifier_xpm_thinker.lua", LUA_MODIFIER_MOTION_NONE )
   -- CreateModifierThinker( nil, nil, "modifier_xpm_thinker", {}, Vector( 0, 0, 0 ), DOTA_TEAM_NEUTRALS, false )

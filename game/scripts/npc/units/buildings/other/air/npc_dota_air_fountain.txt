@@ -40,7 +40,7 @@
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"1200"		// Range within a target can be acquired.
 		"AttackRange"				"1200"		// Range within a target can be attacked. (was 690)
-		"ProjectileModel"			"particles/base_attacks/fountain_attack.vpcf" // Particle system model for projectile.
+		"ProjectileModel"			"particles/econ/items/keeper_of_the_light/kotl_weapon_arcane_staff/keeper_base_attack_arcane_staff.vpcf" // Particle system model for projectile.
 		"ProjectileSpeed"			"1400"		// Speed of projectile.
 
 		// Attributes

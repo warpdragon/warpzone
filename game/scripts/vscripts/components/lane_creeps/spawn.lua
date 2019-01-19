@@ -23,7 +23,7 @@ function SpawnLaneCreeps:Init ()
 end
 
 -- Fancy function to spawn our lane creeps
--- it's desinged in a way so we don't need to write a function for every lane
+-- it's designed in a way so we don't need to write a function for every lane
 function SpawnLaneCreeps:SpawnCreeps()
   -- First we loop through the first layer of our settings table.
   PrintTable(self.Settings.Lanes)
