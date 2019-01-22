@@ -61,7 +61,7 @@ function buildLaneCreepSettings()
 
   local Prefab = {
     air_c = {
-      condition = function() return IsValidAlive(Entities:FindByName(nil, "fountain_air")) end,
+      condition = function() return IsValidEntity(Entities:FindByName(nil, "fountain_air")) end,
       ["true"] = {
         buildWaypoint("point_cc_air"),
         buildWaypoint("fountain_air"),
@@ -73,7 +73,7 @@ function buildLaneCreepSettings()
       },
     },
     air_cc = {
-      condition = function() return IsValidAlive(Entities:FindByName(nil, "fountain_air")) end,
+      condition = function() return IsValidEntity(Entities:FindByName(nil, "fountain_air")) end,
       ["true"] = {
         buildWaypoint("point_c_air"),
         buildWaypoint("fountain_air"),
@@ -85,7 +85,7 @@ function buildLaneCreepSettings()
       }
     },
     water_c = {
-      condition = function() return IsValidAlive(Entities:FindByName(nil, "fountain_water")) end,
+      condition = function() return IsValidEntity(Entities:FindByName(nil, "fountain_water")) end,
       ["true"] = {
         buildWaypoint("point_cc_water"),
         buildWaypoint("fountain_water"),
@@ -97,7 +97,7 @@ function buildLaneCreepSettings()
       },
     },
     water_cc = {
-      condition = function() return IsValidAlive(Entities:FindByName(nil, "fountain_water")) end,
+      condition = function() return IsValidEntity(Entities:FindByName(nil, "fountain_water")) end,
       ["true"] = {
         buildWaypoint("point_c_water"),
         buildWaypoint("fountain_water"),
@@ -109,7 +109,7 @@ function buildLaneCreepSettings()
       }
     },
     fire_c = {
-      condition = function() return IsValidAlive(Entities:FindByName(nil, "fountain_fire")) end,
+      condition = function() return IsValidEntity(Entities:FindByName(nil, "fountain_fire")) end,
       ["true"] = {
         buildWaypoint("point_cc_fire"),
         buildWaypoint("fountain_fire"),
@@ -121,7 +121,7 @@ function buildLaneCreepSettings()
       }
     },
     fire_cc = {
-      condition = function() return IsValidAlive(Entities:FindByName(nil, "fountain_fire")) end,
+      condition = function() return IsValidEntity(Entities:FindByName(nil, "fountain_fire")) end,
       ["true"] = {
         buildWaypoint("point_c_fire"),
         buildWaypoint("fountain_fire"),
@@ -133,7 +133,7 @@ function buildLaneCreepSettings()
       }
     },
     earth_c = {
-      condition = function() return IsValidAlive(Entities:FindByName(nil, "fountain_earth")) end,
+      condition = function() return IsValidEntity(Entities:FindByName(nil, "fountain_earth")) end,
       ["true"] = {
         buildWaypoint("point_cc_earth"),
         buildWaypoint("fountain_earth"),
@@ -145,7 +145,7 @@ function buildLaneCreepSettings()
       }
     },
     earth_cc = {
-      condition = function() return IsValidAlive(Entities:FindByName(nil, "fountain_earth")) end,
+      condition = function() return IsValidEntity(Entities:FindByName(nil, "fountain_earth")) end,
       ["true"] = {
         buildWaypoint("point_c_earth"),
         buildWaypoint("fountain_earth"),
@@ -275,7 +275,7 @@ function buildLaneCreepSettings()
           clockwise = {
             Spawn = getPosition("point_c_fire_spawn"),
             Waypoints = {
-              Prefab.fire_c_7,
+              Prefab.fire_c_6,
               Prefab.earth_c,
               Prefab.point_9,
               Prefab.air_c,

@@ -1,7 +1,7 @@
-@define TotalLength: 40s;
+@define TotalLength: 140s;
 @define TimingFunc: linear;
 @define IterationCount: 1;
-@define AnimationDelay: 0s;
+@define AnimationDelay: 7000s;
 
 .AddonLoadingRoot
 {
@@ -15,8 +15,8 @@
 {
   horizontal-align: center;
   vertical-align: bottom;
-  margin-bottom: 150px;
-  margin-left: 100px;
+  margin-bottom: 0px;
+  margin-left: 0px;
   flow-children: right;
 }
 
@@ -39,7 +39,7 @@
 
 #CustomBg
 {
-  margin-top: 350px;
+  margin-top: 0px;
     overflow: clip;
   pre-transform-scale2d: 1.0;
   animation-name: gamemode_anim;
@@ -51,7 +51,7 @@
 
 #gamemode
 {
-  margin-left: 160px;
+  margin-left: 0px;
   /*margin-bottom: 0px;*/
   
 }

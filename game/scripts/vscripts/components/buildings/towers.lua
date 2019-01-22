@@ -33,9 +33,9 @@ end
 function SpawnFireTowers()
 	local point1cc = Entities:FindByName( nil, "tier1_cc_fire"):GetAbsOrigin()
 	local point1c = Entities:FindByName( nil, "tier1_c_fire"):GetAbsOrigin()
-	local unit1cc = CreateUnitByName("npc_dota_air_tower1_counter_clockwise", point1cc, true, nil, nil, DOTA_TEAM_BADGUYS)
+	local unit1cc = CreateUnitByName("npc_dota_fire_tower1_counter_clockwise", point1cc, true, nil, nil, DOTA_TEAM_BADGUYS)
 	unit1cc:SetRenderColor(255,33,49)
-	local unit1c = CreateUnitByName("npc_dota_air_tower1_counter_clockwise", point1c, true, nil, nil, DOTA_TEAM_BADGUYS)
+	local unit1c = CreateUnitByName("npc_dota_fire_tower1_counter_clockwise", point1c, true, nil, nil, DOTA_TEAM_BADGUYS)
 	unit1c:SetRenderColor(255,33,49)
 	print ("warp towers fire")
 end
